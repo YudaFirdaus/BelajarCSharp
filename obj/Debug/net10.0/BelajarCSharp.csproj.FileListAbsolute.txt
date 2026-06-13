@@ -1,0 +1,14 @@
+D:\UnityProjects\BelajarCSharp\obj\Debug\net10.0\BelajarCSharp.GeneratedMSBuildEditorConfig.editorconfig
+D:\UnityProjects\BelajarCSharp\obj\Debug\net10.0\BelajarCSharp.AssemblyInfoInputs.cache
+D:\UnityProjects\BelajarCSharp\obj\Debug\net10.0\BelajarCSharp.AssemblyInfo.cs
+D:\UnityProjects\BelajarCSharp\obj\Debug\net10.0\BelajarCSharp.csproj.CoreCompileInputs.cache
+D:\UnityProjects\BelajarCSharp\bin\Debug\net10.0\BelajarCSharp.exe
+D:\UnityProjects\BelajarCSharp\bin\Debug\net10.0\BelajarCSharp.deps.json
+D:\UnityProjects\BelajarCSharp\bin\Debug\net10.0\BelajarCSharp.runtimeconfig.json
+D:\UnityProjects\BelajarCSharp\bin\Debug\net10.0\BelajarCSharp.dll
+D:\UnityProjects\BelajarCSharp\bin\Debug\net10.0\BelajarCSharp.pdb
+D:\UnityProjects\BelajarCSharp\obj\Debug\net10.0\BelajarCSharp.dll
+D:\UnityProjects\BelajarCSharp\obj\Debug\net10.0\refint\BelajarCSharp.dll
+D:\UnityProjects\BelajarCSharp\obj\Debug\net10.0\BelajarCSharp.pdb
+D:\UnityProjects\BelajarCSharp\obj\Debug\net10.0\BelajarCSharp.genruntimeconfig.cache
+D:\UnityProjects\BelajarCSharp\obj\Debug\net10.0\ref\BelajarCSharp.dll
