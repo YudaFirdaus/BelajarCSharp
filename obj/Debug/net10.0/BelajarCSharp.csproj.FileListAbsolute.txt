@@ -12,3 +12,4 @@ D:\UnityProjects\BelajarCSharp\obj\Debug\net10.0\refint\BelajarCSharp.dll
 D:\UnityProjects\BelajarCSharp\obj\Debug\net10.0\BelajarCSharp.pdb
 D:\UnityProjects\BelajarCSharp\obj\Debug\net10.0\BelajarCSharp.genruntimeconfig.cache
 D:\UnityProjects\BelajarCSharp\obj\Debug\net10.0\ref\BelajarCSharp.dll
+D:\UnityProjects\BelajarCSharp\obj\Debug\net10.0\BelajarCSharp.sourcelink.json

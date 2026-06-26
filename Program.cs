@@ -1,44 +1,22 @@
 using System;
 
-class Hari2
+class Hari3
 {
     static void Main()
     {
-        int hp = 20;
-        int hpMaksimal = 100;
-        int level = 5;
-        string nama = "Yuda";
-
-        // Cek kondisi HP
-        if (hp <= 0)
+        for (int i = 1; i <= 3; i++)
         {
-            Console.WriteLine(nama + " telah gugur! Game Over.");
+            System.Console.WriteLine("Lantai " + i + ": Masuk...");
+            int HP = 60;
+            while (HP > 0)
+            {
+                HP -= 20;
+                System.Console.WriteLine("Musuh muncul! HP Musuh: " + HP);
+            }
+             System.Console.WriteLine("Lantai " + i + " selesai!\n");
         }
-        else if (hp < 30)
-        {
-            Console.WriteLine("Peringatan! HP " + nama + " kritis: " + hp);
-        }
-        else if (hp < 60)
-        {
-            Console.WriteLine(nama + " terluka. HP: " + hp);
-        }
-        else
-        {
-            Console.WriteLine(nama + " sehat. HP: " + hp + "/" + hpMaksimal);
-        }
-
-        // Cek level
-        if (level >= 10)
-        {
-            Console.WriteLine("Rank: Veteran");
-        }
-        else if (level >= 5)
-        {
-            Console.WriteLine("Rank: Pejuang");
-        }
-        else
-        {
-            Console.WriteLine("Rank: Pemula");
-        }
+        System.Console.WriteLine("Dungeon selesai!");
     }
+     
+    
 }
