@@ -24,6 +24,14 @@ class Hari4
         else return "Pemula";
     }
 
+    // Fungsi dengan return string
+    static string CekHP(int hp)
+    {
+        if (hp > 60) return "Sehat";
+        else if (hp > 30) return "Terluka";
+        else return "Kritis";
+    }
+
     static void Main()
     {
         // Panggil fungsi SapaPlayer
@@ -41,5 +49,11 @@ class Hari4
         System.Console.WriteLine("Rank level 3: " + CekRank(3));
         System.Console.WriteLine("Rank level 7: " + CekRank(7));
         System.Console.WriteLine("Rank level 12: " + CekRank(12));
+
+         // Panggil fungsi CekHp
+        System.Console.WriteLine("Hp 75: " + CekHP(75));
+        System.Console.WriteLine("HP 35: " + CekHP(35));
+        System.Console.WriteLine("HP 10: " + CekHP(10));
+
     }
 }

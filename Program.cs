@@ -1,20 +1,36 @@
 using System;
-
-class Hari4
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Net.WebSockets;
+class Hari5
 {
-    // Fungsi dengan return string
-    static string CekHP(int hp)
-    {
-        if (hp > 60) return "Sehat";
-        else if (hp > 30) return "Terluka";
-        else return "Kritis";
-    }
-
     static void Main()
     {
-        // Panggil fungsi CekHp
-        System.Console.WriteLine("Hp 75: " + CekHP(75));
-        System.Console.WriteLine("HP 35: " + CekHP(35));
-        System.Console.WriteLine("HP 10: " + CekHP(10));
+        System.Console.WriteLine("=== Skill Karakter ===");
+        List<string> skill = new List<string> { "Slash", "Shield Bash", "War Cry"};
+        foreach (string s in skill)
+        {
+            System.Console.WriteLine("- " + s);
+        }
+
+        System.Console.WriteLine("\n=== Belajar Skill Baru ===");
+        skill.Add("Counter Attack");
+        skill.Add("Berserker Mode");
+        System.Console.WriteLine("Warrior mempelajari: " + skill[3]);
+        System.Console.WriteLine("Warrior mempelajari: " + skill[4]);
+        System.Console.WriteLine("Warrior kini memiliki " + skill.Count + " skill!");
+
+        System.Console.WriteLine("\n=== Lupa Skill ===");
+        System.Console.WriteLine("Warrior melupakan: " + skill[1]);
+        skill.Remove("Shield Bash");
+        System.Console.WriteLine("Skill aktif Warrior: " + skill.Count);
+        foreach (string s in skill)
+        {
+            System.Console.WriteLine("- " + s);
+        }
+
+        System.Console.WriteLine("\n=== Skill Utama ===");
+        System.Console.WriteLine("Skill pertama: " + skill[0]);
+        System.Console.WriteLine("Skill terakhir: " + skill[skill.Count - 1]);
     }
 }
