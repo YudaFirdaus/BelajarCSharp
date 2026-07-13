@@ -1,64 +1,87 @@
 using System;
-using System.Collections.Concurrent;
-using System.Runtime.ConstrainedExecution;
-using System.Runtime.InteropServices;
+using System.Collections.Generic;
 
-class Hari6
+ class Senjata
+{
+  public string Nama;
+  public int Damage;
+  public string Tipe;
+
+  public Senjata(string nama, int damage, string tipe)
+  {
+    Nama = nama;
+    Damage = damage;
+    Tipe = tipe;
+  }
+}
+class Inventory
+{
+  public string PemilikNama;
+  public List<Senjata> DaftarSenjata;
+
+  public Inventory(string nama)
+  {
+    PemilikNama = nama;
+    DaftarSenjata = new List<Senjata>();
+  }
+
+  public void TambahSenjata(Senjata s)
+  {
+    DaftarSenjata.Add(s);
+    System.Console.WriteLine(s.Nama + " ditambahkan ke inventory!");
+  }
+
+  public void HapusSenjata(string namaSenjata)
+  {
+    for (int i = 0; i < DaftarSenjata.Count; i++)
+    {
+      if (DaftarSenjata[i].Nama == namaSenjata)
+      {
+        DaftarSenjata.RemoveAt(i);
+        System.Console.WriteLine(namaSenjata + " dihapus dari inventory!");
+        return;
+      }
+    }
+  }
+
+  public void TampilInventory()
+  {
+    System.Console.WriteLine("=== Inventory " + PemilikNama + " ===");
+    for (int i = 0; i < DaftarSenjata.Count; i++)
+    {
+      System.Console.WriteLine("Slot " + (i + 1) + ": " + DaftarSenjata[i].Nama + " (Damage: " + DaftarSenjata[i].Damage + ")");
+    }
+    System.Console.WriteLine("Total senjata: " + DaftarSenjata.Count);
+  }
+}
+
+class Hari8
 {
   static void Main()
   {
-    System.Console.WriteLine("=== GAME RPG SEDERHANA ===");
-    System.Console.WriteLine("Masukkan nama karaktermu: ");
-    string nama = Console.ReadLine();
-    System.Console.WriteLine("Pilih kelas (Warrior/Mage/Archer): ");
-    string kelas = Console.ReadLine();
+    Senjata excalibur = new Senjata("Excalibur", 50, "Pedang");
+    Senjata sword = new Senjata("Sword", 55, "Pedang");
+    Senjata staff = new Senjata("Staff", 45, "Tongkat");
+    Senjata dagger = new Senjata("Dagger", 30, "Pisau");
 
-    int hp = 0;
-    int attack = 0;
-    string[] skill = {};
+    Inventory inv = new Inventory("Aksara");
+    inv.TambahSenjata(excalibur);
+    inv.TambahSenjata(sword);
+    inv.TambahSenjata(staff);
+    inv.TampilInventory();
 
-    if (kelas.ToLower() == "warrior")
-    {
-      hp = 100;
-      attack = 30;
-      skill = new string [] {"Slash", "Shild Bash", "War Cry"};
-    }
-    else if (kelas.ToLower() == "mage")
-    {
-      hp = 70;
-      attack = 50;
-      skill = new string [] {"Fireball", "Ice Spike", "Thunder"};
-    }
-    else if (kelas.ToLower() == "archer")
-    {
-      hp = 85;
-      attack = 45;
-      skill = new string [] {"Arrow Shot", "Multi Shot", "Eagele Eye"};
-    }
+    // Tambah dagger
+    System.Console.WriteLine("\n=== Tambah Senjata ===");
+    inv.TambahSenjata(dagger);
+    System.Console.WriteLine("Total senjata: " + inv.DaftarSenjata.Count);
 
-    System.Console.WriteLine("\n=== Karakter Dibuat! ===");
-    System.Console.WriteLine("Nama: " + nama);
-    System.Console.WriteLine("Kelas: " + kelas);
-    System.Console.WriteLine("HP: " + hp);
-    System.Console.WriteLine("Attack: " + attack);
+    // Hapus sword
+    System.Console.WriteLine("\n=== Hapus Senjata ===");
+    inv.HapusSenjata("Sword");
+    System.Console.WriteLine("Total senjata: " + inv.DaftarSenjata.Count);
 
-    System.Console.WriteLine("\n=== Skill " + kelas + " ===");
-    for (int i = 0; i < skill.Length; i++)
-    {
-      System.Console.WriteLine((i + 1) + ". " + skill[i]);
-    }
-
-    System.Console.WriteLine("\n=== Simulasi Pertarungan ===");
-    System.Console.WriteLine(nama + " menyerang musuh!");
-    int HPmusuh = 100;
-    int giliran = 1;
-    while (HPmusuh > 0)
-    {
-      HPmusuh -= attack;
-      if (HPmusuh < 0) HPmusuh = 0;
-      System.Console.WriteLine("Giliran " + giliran + " - Hp Musuh: " + HPmusuh);
-      giliran++;
-    }
-    System.Console.WriteLine("Musuh dikalahkan dalam " + (giliran -1) + " giliran!");
+    // Tampil inventory akhir
+    System.Console.WriteLine("\n=== Inventory Akhir ===");
+    inv.TampilInventory();
   }
 }
