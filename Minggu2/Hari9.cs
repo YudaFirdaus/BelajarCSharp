@@ -115,7 +115,7 @@ class Senjata
   }
 }
 
-class Program
+class Hari9
 {
   static void Main()
   {
@@ -138,7 +138,7 @@ class Program
     senjata.Gunakan(); // kurangi durabilitas
     hpMusuh -= senjata.Damage;
     if (hpMusuh < 0) hpMusuh = 0;
-    System.Console.WriteLine("Musuh terkana " + senjata.Damage + " damage! HP Musuh: " + hpMusuh + "/" + hpMusuhMax);
+    System.Console.WriteLine("Musuh terkena " + senjata.Damage + " damage! HP Musuh: " + hpMusuh + "/" + hpMusuhMax);
 
     if (hpMusuh == 0)
     {

@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <DefaultItemExcludes>$(DefaultItemExcludes);Minggu1/**/*.cs</DefaultItemExcludes>
+    <DefaultItemExcludes>$(DefaultItemExcludes);Minggu1/**/*.cs;Minggu2/**/*.cs</DefaultItemExcludes>
   </PropertyGroup>
 
 </Project>
