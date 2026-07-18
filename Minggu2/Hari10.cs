@@ -138,7 +138,7 @@ class Enemy : Karakter
   }
 }
 
-class Program
+class Hari10
 {
   static void Main()
   {
