@@ -189,7 +189,7 @@ class Knight : KarakterBase, IBisa, IBisaSembuh, IBisaBertahan
   }
 }
 
-class Program
+class Hari11
 {
   static void Main()
   {
